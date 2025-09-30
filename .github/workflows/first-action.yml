@@ -1,0 +1,16 @@
+name: my first action file
+on: [push]
+jobs: 
+    first_job:
+        runs-on: ubuntu-latest
+        steps:
+        - name: welcome message
+          run: echo "My first job action"
+        - name: list all the files
+          run: ls
+        - name: make directory
+          run: mkdir haris
+        - name: remove direcotry
+          run: rm -rf haris
+        - name: read readme file
+          run: cat README.md
