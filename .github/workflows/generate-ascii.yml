@@ -10,7 +10,8 @@ jobs:
             - name: instal cowsay 3rd party library
               run: sudo apt-get install cowsay -y
 
-            - name: run script file ascii
-              run: |
-                chmod +x ./ascii-script.sh
-                ./ascii-script.sh
+            - name: giving access to script file
+              run: chmod +x ascii-script.sh
+              
+            - name: run script file
+              run: ./ascii-script.sh
