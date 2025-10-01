@@ -12,5 +12,7 @@ jobs:
           run: mkdir haris
         - name: remove direcotry
           run: rm -rf haris
+        - name: checkout into repo
+          uses: actions/checkout@v5
         - name: read readme file
           run: cat README.md
