@@ -14,6 +14,9 @@ jobs:
             actions/checkout@v5
             cat README.md
 
+        - name: instal cowsay 3rd party library
+          run: sudo apt-get install cowsay -y
+
         - name: third party library
           run: cosway -f dragon "Run for cover, i am a dragon...rawr" >> dragon.txt
 

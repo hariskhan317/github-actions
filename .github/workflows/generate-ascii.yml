@@ -1,7 +1,7 @@
 name: install and generate ascii artifact
 on: push
 jobs:
-    first-job:
+    generate-ascii:
         runs-on: ubuntu-latest
         steps:
             - name: checkout into main repo
