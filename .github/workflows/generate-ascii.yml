@@ -10,11 +10,7 @@ jobs:
             - name: instal cowsay 3rd party library
               run: sudo apt-get install cowsay -y
 
-            - name: create asii dragon file as
-              run: cowsay -f dragon "Run for cover, i am a dragon...rawr" >> dragon.txt
-
-            - name: check if file exist
-              run: grep -i "dragon" dragon.txt
-
-            - name: read dragon file
-              run: cat dragon.txt
+            - name: run script file ascii
+              run: |
+                chmod +x ascii-script
+                ./ascii-script.sh
