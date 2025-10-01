@@ -4,14 +4,17 @@ jobs:
     first_job:
         runs-on: ubuntu-latest
         steps:
+        - name: checkout into main
+          uses: actions/checkout@v5
+
         - name: welcome message
           run: echo "My first job action"
+
         - name: list of tasks and reading in to repo
           run: | 
             ls
             mkdir haris
             rm -rf haris
-            actions/checkout@v5
             cat README.md
 
         - name: instal cowsay 3rd party library
