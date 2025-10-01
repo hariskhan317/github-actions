@@ -1,0 +1,20 @@
+name: install and generate ascii artifact
+on: push
+jobs:
+    first-job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout into main repo
+              uses: actions/checkout@v5
+
+            - name: instal cowsay 3rd party library
+              run: sudo apt-get install cowsay -y
+
+            - name: create asii dragon file as
+              run: cosway -f dragon "Run for cover, i am a dragon...rawr" >> dragon.txt
+
+            - name: check if file exist
+              run: grep -i "dragon" dragon.txt
+
+            - name: read dragon file
+              run: cat dragon.txt

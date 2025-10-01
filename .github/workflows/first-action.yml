@@ -6,13 +6,16 @@ jobs:
         steps:
         - name: welcome message
           run: echo "My first job action"
-        - name: list all the files
-          run: ls
-        - name: make directory
-          run: mkdir haris
-        - name: remove direcotry
-          run: rm -rf haris
-        - name: checkout into repo
-          uses: actions/checkout@v5
-        - name: read readme file
-          run: cat README.md
+        - name: list of tasks and reading in to repo
+          run: | 
+            ls
+            mkdir haris
+            rm -rf haris
+            actions/checkout@v5
+            cat README.md
+
+        - name: third party library
+          run: cosway -f dragon "Run for cover, i am a dragon...rawr" >> dragon.txt
+
+        - name: list repo file
+          run: ls -ltra
