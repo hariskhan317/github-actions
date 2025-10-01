@@ -21,7 +21,7 @@ jobs:
           run: sudo apt-get install cowsay -y
 
         - name: third party library
-          run: cosway -f dragon "Run for cover, i am a dragon...rawr" >> dragon.txt
+          run: cowsay -f dragon "Run for cover, i am a dragon...rawr" >> dragon.txt
 
         - name: list repo file
           run: ls -ltra
