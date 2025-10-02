@@ -6,11 +6,12 @@ jobs:
         steps:
             - name: installing cowsay
               run: sudo apt-get install cowsay -y
-            - name: show text
+            - name: execute cowsay command
               run: cowsay -f dragon "run for cover, i am dragon ra...r" >> dragon.txt
             - name: sleep for 1 seconds
               run: sleep 1
     test_job_2:
+        needs: build_job_1
         runs-on: ubuntu/latest
         steps:  
             - name: testing file
@@ -18,6 +19,7 @@ jobs:
             - name: sleep for 1 seconds
               run: sleep 1
     deploy_job_3:
+        needs: test_job_2
         runs-on: ubuntu/latest
         steps:
             - name: read file
